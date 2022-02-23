@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Estilo.css">
+    <title>Proyecto</title>
+</head>
+<body>
+    
+<html>
+
+
+
+        <h1> Proyecto final contabilidad</h1>
+        <hr> 
+        <h2 style="color: rgb(196, 205, 207)">Punto de equilibrio</h2> 
+        <h3 style="color: rgb(89, 219, 219)">Jonathan Ramiro Elías Vaásquez</h3>
+        <h3 style="color: rgb(89, 219, 219)">Derik Leonardo Chan Cancinos</h3>
+        <hr>
+        <br>
+        <br>
+        <form action="">
+            <tr>
+                <td>
+                <label for ="venta"> Ingrese precio venta: '</label>
+                <input type="number" name ="venta" id ="venta" >
+                </td>
+            </tr>
+            <div>
+                <label for ="costo"> Ingrese costo unidad:'</label>
+                <input type="number" name ="costo" id ="costo" >
+            </div>
+            <div>
+                <label for ="gasto"> Ingrese gastos fijos:</label>
+                <input type="number" name ="gasto" id ="gasto" >
+            </div>
+            <br>
+            <div>
+                <input type="button" value="Calcular" onclick="calculo();">
+            </div>
+    
+        </form>
+        
+        <script>
+            function calculo()
+            {
+                var venta = parseInt(document.getElementById('venta').value);
+                var costo = parseInt(document.getElementById('costo').value);
+                var gasto = parseInt(document.getElementById('gasto').value);
+                var resta = venta - costo;
+                var unidades = gasto / resta;
+                var punto_de_equilibrio_quetzales = unidades * unidades;
+
+                document.write ('Unidades minimas: ', unidades);
+                document.write('Punto de equilibrio es Q:'+ punto_de_equilibrio_quetzales)
+            }
+        </script>
+
+
+
+</body>
+</html>
